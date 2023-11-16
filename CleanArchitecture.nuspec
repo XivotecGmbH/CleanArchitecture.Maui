@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+
+  <metadata>
+    <id>Xivotec.CleanArchitecture.Maui.Template</id>
+    <version>1.0.0</version>
+    <title>Clean Architecture .NET MAUI Solution Template</title>
+    <authors>Xivotec GmbH</authors>
+	
+    <description>
+		Clean Architecture Solution Template for .NET 8.0 and MAUI.
+	</description>
+	
+    <summary>
+		A Clean Architecture Solution Template for creating applications with .NET MAUI.
+    </summary>
+	
+    <releaseNotes>
+		Initial .NET 8.0 Release Version
+    </releaseNotes>
+
+    <projectUrl>https://github.com/XivotecGmbH/CleanArchitecture.Maui</projectUrl>
+    <repository type="git" url="https://github.com/XivotecGmbH/CleanArchitecture.Maui.git" branch="main" />
+
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>clean-architecture project template csharp dotnet dotnetmaui</tags>
+	<icon>icon.png</icon>
+    <readme>README.md</readme>
+
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+
+  </metadata>
+
+  <files>
+    <file src=".template.config\icon.png" />
+    <file src="README.md" />
+    <file src=".\**" target="content" exclude="**\bin\**;**\obj\**;.\.vs\**;.\.git\**;.\.github\**;.\.sonarqube\**;.\LICENSE;.\README.md;" />
+  </files>
+
+</package>

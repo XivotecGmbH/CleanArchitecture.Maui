@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:HeaderFooterPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewModels="clr-namespace:Xivotec.CleanArchitecture.Presentation.ViewModels.ToDoList"
+             xmlns:controls="clr-namespace:Xivotec.CleanArchitecture.Presentation.Views.Controls"
+             x:Class="Xivotec.CleanArchitecture.Presentation.Views.Pages.ToDoList.ToDoDetailPage"
+             x:DataType="viewModels:ToDoDetailViewModel">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <toolkit:InvertedBoolConverter x:Key="InvertedBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid RowDefinitions="auto, *, auto" 
+          Padding="20" 
+          RowSpacing="20">
+        
+        <HorizontalStackLayout Spacing="20">
+            <Label Text="ToDo: " 
+                FontSize="Large" 
+                VerticalOptions="Center"/>
+            <Entry Placeholder="ToDoItem Title"
+                FontSize="Medium" Text="{Binding Title}"
+                WidthRequest="400"
+                VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+        
+        <VerticalStackLayout
+            Grid.Row="1">
+            <Label Text="Note:"
+                FontSize="Large"/>
+            <ScrollView MaximumHeightRequest="500">
+                <Editor
+                    FontSize="Medium"
+                    Text="{Binding Note}"
+                    Placeholder="ToDoItem Note"
+                    AutoSize="TextChanges"/>
+            </ScrollView>
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="2" 
+            Spacing="20" 
+            HeightRequest="75"
+            HorizontalOptions="Center">
+            <Button WidthRequest="200"
+                Text="Save"
+                FontSize="32"
+                FontAttributes="Bold"
+                Command="{Binding SaveItemCommand}"
+                IsVisible="{Binding IsNewItem}" />
+            <Button WidthRequest="200"
+                Text="Cancel"
+                FontSize="32"
+                FontAttributes="Bold" 
+                Command="{Binding CancelItemCommand}"
+                IsVisible="{Binding IsNewItem}" />
+            <Button WidthRequest="200"
+                Text="Update"
+                FontSize="32"
+                FontAttributes="Bold" 
+                Command="{Binding UpdateItemCommand}"
+                IsVisible="{Binding IsNewItem, Converter={StaticResource InvertedBoolConverter}}"/>
+            <Button WidthRequest="200"
+                Text="Delete"
+                FontSize="32"
+                FontAttributes="Bold" 
+                Command="{Binding DeleteItemCommand}"
+                IsVisible="{Binding IsNewItem, Converter={StaticResource InvertedBoolConverter}}"/>
+        </HorizontalStackLayout>
+    </Grid>
+    
+</controls:HeaderFooterPage>

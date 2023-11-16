@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D8241381-4D99-45C5-B40C-4A09E4593E7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xivotec.CleanArchitecture.Presentation", "src\Xivotec.CleanArchitecture.Presentation\Xivotec.CleanArchitecture.Presentation.csproj", "{BA2D3015-E0FF-47BC-B9FE-DC6FB66D4434}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xivotec.CleanArchitecture.Application", "src\Xivotec.CleanArchitecture.Application\Xivotec.CleanArchitecture.Application.csproj", "{85EE2752-CAE1-43EB-8948-3EC9160673E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xivotec.CleanArchitecture.Domain", "src\Xivotec.CleanArchitecture.Domain\Xivotec.CleanArchitecture.Domain.csproj", "{AE9FEEF4-80D6-4357-8587-603927449DC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xivotec.CleanArchitecture.Infrastructure", "src\Xivotec.CleanArchitecture.Infrastructure\Xivotec.CleanArchitecture.Infrastructure.csproj", "{1AA70941-B290-4DA8-A3B7-7287668D2B5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xivotec.CleanArchitecture.Infrastructure.PostgreSQLPort", "src\Xivotec.CleanArchitecture.Infrastructure.PostgreSQLPort\Xivotec.CleanArchitecture.Infrastructure.PostgreSQLPort.csproj", "{13671F3A-CE72-43AC-9B8F-FF67DB9AA83F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AB997D15-D132-411F-9031-FE5CF60AD864}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xivotec.CleanArchitecture.Infrastructure.UnitTests", "tests\Xivotec.CleanArchitecture.Infrastructure.UnitTests\Xivotec.CleanArchitecture.Infrastructure.UnitTests.csproj", "{52AA27FD-9690-4CC7-A802-C099F9FCF021}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xivotec.CleanArchitecture.Application.UnitTests", "tests\Xivotec.CleanArchitecture.Application.UnitTests\Xivotec.CleanArchitecture.Application.UnitTests.csproj", "{AD7EED5E-63CF-4C62-8576-E458ABBD8E46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA2D3015-E0FF-47BC-B9FE-DC6FB66D4434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2D3015-E0FF-47BC-B9FE-DC6FB66D4434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2D3015-E0FF-47BC-B9FE-DC6FB66D4434}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BA2D3015-E0FF-47BC-B9FE-DC6FB66D4434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2D3015-E0FF-47BC-B9FE-DC6FB66D4434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2D3015-E0FF-47BC-B9FE-DC6FB66D4434}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{85EE2752-CAE1-43EB-8948-3EC9160673E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85EE2752-CAE1-43EB-8948-3EC9160673E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85EE2752-CAE1-43EB-8948-3EC9160673E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85EE2752-CAE1-43EB-8948-3EC9160673E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE9FEEF4-80D6-4357-8587-603927449DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE9FEEF4-80D6-4357-8587-603927449DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE9FEEF4-80D6-4357-8587-603927449DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE9FEEF4-80D6-4357-8587-603927449DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA70941-B290-4DA8-A3B7-7287668D2B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA70941-B290-4DA8-A3B7-7287668D2B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA70941-B290-4DA8-A3B7-7287668D2B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA70941-B290-4DA8-A3B7-7287668D2B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13671F3A-CE72-43AC-9B8F-FF67DB9AA83F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13671F3A-CE72-43AC-9B8F-FF67DB9AA83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13671F3A-CE72-43AC-9B8F-FF67DB9AA83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13671F3A-CE72-43AC-9B8F-FF67DB9AA83F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52AA27FD-9690-4CC7-A802-C099F9FCF021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52AA27FD-9690-4CC7-A802-C099F9FCF021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52AA27FD-9690-4CC7-A802-C099F9FCF021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52AA27FD-9690-4CC7-A802-C099F9FCF021}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD7EED5E-63CF-4C62-8576-E458ABBD8E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD7EED5E-63CF-4C62-8576-E458ABBD8E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD7EED5E-63CF-4C62-8576-E458ABBD8E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD7EED5E-63CF-4C62-8576-E458ABBD8E46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA2D3015-E0FF-47BC-B9FE-DC6FB66D4434} = {D8241381-4D99-45C5-B40C-4A09E4593E7B}
+		{85EE2752-CAE1-43EB-8948-3EC9160673E1} = {D8241381-4D99-45C5-B40C-4A09E4593E7B}
+		{AE9FEEF4-80D6-4357-8587-603927449DC5} = {D8241381-4D99-45C5-B40C-4A09E4593E7B}
+		{1AA70941-B290-4DA8-A3B7-7287668D2B5F} = {D8241381-4D99-45C5-B40C-4A09E4593E7B}
+		{13671F3A-CE72-43AC-9B8F-FF67DB9AA83F} = {D8241381-4D99-45C5-B40C-4A09E4593E7B}
+		{52AA27FD-9690-4CC7-A802-C099F9FCF021} = {AB997D15-D132-411F-9031-FE5CF60AD864}
+		{AD7EED5E-63CF-4C62-8576-E458ABBD8E46} = {AB997D15-D132-411F-9031-FE5CF60AD864}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E0EC016-32D4-4AD6-B872-DA221E2D3035}
+	EndGlobalSection
+EndGlobal

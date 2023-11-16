@@ -1,0 +1,44 @@
+{
+	"$schema": "http://json.schemastore.org/template",
+	"author": "Xivotec GmbH",
+	"classifications": 
+	[ 
+		"Clean Architecture", 
+		".NET MAUI" 
+	],
+	"name": "Clean Architecture Solution .NET MAUI Template",
+	"description": "A Clean Architecture Solution Template for creating an Solution with .NET MAUI",
+	"identity": "Xivotec.CleanArchitecture.Maui.Template",
+	"groupIdentity": "Xivotec.Templates",
+	"shortName": "xt-camaui-sln",
+	"tags": 
+	{
+		"language": "C#",
+		"type": "project"
+	},
+	"sourceName":"Xivotec.CleanArchitecture",
+	"preferNameDirectory": true,
+	"sources": 
+	[
+		{
+			"source": "./",
+			"target": "./",
+			"exclude": 
+			[
+				"**/[Bb]in/**/*",
+				"**/[Oo]bj/**/*",
+				"**/.vs/**/*",
+				".git/**/*",
+				".github/**/*",
+				".template.config/**/*",				
+				"*.nuspec",
+				".sonar*/**/*",
+				"*coverage*.xml"
+			],
+			"rename": 
+			{
+				"README-template.md": "README.md"
+			}
+		}
+	]
+}

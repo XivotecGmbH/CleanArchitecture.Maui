@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:HeaderFooterPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Xivotec.CleanArchitecture.Presentation.ViewModels"
+             xmlns:controls="clr-namespace:Xivotec.CleanArchitecture.Presentation.Views.Controls"
+             x:Class="Xivotec.CleanArchitecture.Presentation.Views.Pages.SettingsPage"
+             x:DataType="viewModels:SettingsViewModel">
+
+    <VerticalStackLayout Spacing="30" Padding="30">
+
+        <VerticalStackLayout Spacing="10">
+            <Label Text="Application Appearance Settings " 
+                FontSize="Medium" />
+            <BoxView HeightRequest="2"/>
+        
+            <HorizontalStackLayout HorizontalOptions="Start" VerticalOptions="Center" Spacing="40">
+                <Label Text="Enable Light Mode"
+                       HeightRequest="40"
+                       FontSize="Small"
+                       Padding="10"/>
+                <Switch IsToggled="{Binding IsLightMode}"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Spacing="10">
+            <Label Text="Database Connection Settings" 
+            FontSize="Medium" />
+            <BoxView HeightRequest="2"/>
+
+            <VerticalStackLayout Padding="10" Spacing="10">
+                <Label Text="{Binding DbHost, StringFormat='Address:    {0}'}"
+                       FontSize="Small"/>
+                <Label Text="{Binding DbPort, StringFormat='Port:          {0}'}"
+                       FontSize="Small"/>
+                <Label Text="{Binding DbName, StringFormat='Name:        {0}'}"
+                       FontSize="Small"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+    
+</controls:HeaderFooterPage>

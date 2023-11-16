@@ -1,0 +1,32 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+    DOTNETVERSION: 8.0.100
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '${{env.DOTNETVERSION}}'
+
+      - name: Restore solution
+        run: dotnet workload restore
+
+      - name: Build Windows
+        run: dotnet build -c Release
+
+      - name: Build and Run UnitTests
+        run: dotnet test -c Release

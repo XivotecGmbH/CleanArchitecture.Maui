@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:HeaderFooterPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Xivotec.CleanArchitecture.Presentation.ViewModels.ToDoList"
+             xmlns:dataTypes="clr-namespace:Xivotec.CleanArchitecture.Application.ToDoListFeature.Dtos;assembly=Xivotec.CleanArchitecture.Application"
+             xmlns:controls="clr-namespace:Xivotec.CleanArchitecture.Presentation.Views.Controls"
+             xmlns:converter="clr-namespace:Xivotec.CleanArchitecture.Presentation.Converter"
+             x:Class="Xivotec.CleanArchitecture.Presentation.Views.Pages.ToDoList.ToDoItemPage"
+             x:DataType="viewModels:ToDoItemViewModel">
+
+    <ContentPage.Resources>
+        <converter:BoolToIconDoneImageSourceStringConverter x:Key="BoolToIconDoneImageSourceStringConverter"/>
+    </ContentPage.Resources>
+
+    <Grid Margin="20"
+          RowDefinitions="Auto, Auto, *">
+        <Label Text="{Binding Title, StringFormat='Current List: {0}'}" 
+               FontSize="32"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"/>
+
+        <Grid ColumnDefinitions="*, Auto" Grid.Row="1">
+            <Label Text="Add Todo Item" FontSize="25" FontAttributes="Bold"/>
+            <ImageButton
+                Source="{AppThemeBinding Light=icon_add.png,
+                    Dark=icon_add_white.png}"
+                Command="{Binding AddNewItemCommand}"
+                HeightRequest="50" WidthRequest="50"/>
+        </Grid>
+
+        <ScrollView Grid.Row="2" Padding="20">
+            <VerticalStackLayout 
+                BindableLayout.ItemsSource="{Binding ToDoItemsCollection, Mode=TwoWay}"
+                Spacing="10">
+
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Type dataTypes:ToDoItemDto}" >
+                        
+                        <Grid ColumnDefinitions="*, 80" 
+                            ColumnSpacing="10" 
+                            HeightRequest="80">
+                            <Frame BorderColor="Gray"
+                                Padding="10"
+                                BackgroundColor="{AppThemeBinding 
+                                    Light={StaticResource Gray100},
+                                    Dark={StaticResource Black}}">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer                                     
+                                        Command="{Binding Source={
+                                            RelativeSource AncestorType={x:Type viewModels:ToDoItemViewModel}},
+                                            Path=ItemTappedCommand}"
+                                        CommandParameter="{Binding .}" />
+                                </Frame.GestureRecognizers>
+                                <Grid ColumnDefinitions="*, 80">
+                                    <Label 
+                                        Text="{Binding Title}"
+                                        FontSize="24" 
+                                        VerticalOptions="Center"/>
+                                    <ImageButton Source="icon_bin.png" 
+                                        Grid.Column="1"
+                                        Command="{Binding Source={
+                                            RelativeSource AncestorType={x:Type viewModels:ToDoItemViewModel}},
+                                            Path=DeleteItemCommand}"
+                                        CommandParameter="{Binding .}" />
+                                </Grid>
+                            </Frame>
+                            <Frame Grid.Column="1"
+                                   BorderColor="gray"
+                                   BackgroundColor="Transparent"
+                                   Padding="10">
+                                <ImageButton 
+                                    Source="{Binding Done,
+                                        Converter={StaticResource BoolToIconDoneImageSourceStringConverter}}"
+                                    Command="{Binding Source={
+                                        RelativeSource AncestorType={x:Type viewModels:ToDoItemViewModel}},
+                                        Path=ItemDoneTappedCommand}"
+                                    CommandParameter="{Binding .}"/>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</controls:HeaderFooterPage>

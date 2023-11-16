@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controlViewModels="clr-namespace:Xivotec.CleanArchitecture.Presentation.ViewModels.Controls"
+             x:Class="Xivotec.CleanArchitecture.Presentation.Views.Controls.BannerView"
+             x:DataType="controlViewModels:BannerViewViewModel"
+             BackgroundColor="darkblue">
+
+    <FlexLayout Direction="Row" Margin="10" HeightRequest="50">
+        <Image
+            Source="company_logo.png"
+            VerticalOptions="Center"
+            HeightRequest="50"/>
+
+        <Label Text="{Binding ErrorEventMessage}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FlexLayout.Grow="1"
+            TextColor="Red"
+            FontAttributes="Bold"
+            FontSize="20"
+            LineBreakMode="WordWrap"
+            Margin="20,0,0,0"/>
+
+        <VerticalStackLayout VerticalOptions="Center" >
+            <Label Text="{Binding CurrentDate}"
+                FontSize="Body"
+                HorizontalOptions="Center"
+                TextColor="White"/>
+            <Label Text="{Binding CurrentTime}"
+                FontSize="Body"
+                HorizontalOptions="Center"
+                TextColor="White"/>
+        </VerticalStackLayout>
+
+    </FlexLayout>
+</ContentView>

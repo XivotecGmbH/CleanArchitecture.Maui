@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	<RootNamespace>Xivotec.CleanArchitecture.Infrastructure.PostgreSQLPort</RootNamespace>
+	<AssemblyName>Xivotec.CleanArchitecture.Infrastructure.PostgreSQLPort</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xivotec.CleanArchitecture.Application\Xivotec.CleanArchitecture.Application.csproj" />
+    <ProjectReference Include="..\Xivotec.CleanArchitecture.Domain\Xivotec.CleanArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\Xivotec.CleanArchitecture.Infrastructure\Xivotec.CleanArchitecture.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

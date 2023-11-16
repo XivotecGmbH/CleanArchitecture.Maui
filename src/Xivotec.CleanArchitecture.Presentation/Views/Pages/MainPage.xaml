@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:HeaderFooterPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Xivotec.CleanArchitecture.Presentation.ViewModels"
+             xmlns:controls="clr-namespace:Xivotec.CleanArchitecture.Presentation.Views.Controls"
+             x:Class="Xivotec.CleanArchitecture.Presentation.Views.Pages.MainPage"
+             x:DataType="viewModels:MainViewModel"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <Label
+        Text="Welcome to our Clean Architecture .NET MAUI Template. &#10; Take a look around :)"
+        FontSize="32"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        HorizontalTextAlignment="Center"/>
+
+</controls:HeaderFooterPage>
